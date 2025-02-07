@@ -124,3 +124,67 @@ color: var(--main-color);
 .move .line3{
     transform: rotate(45deg) translate(-5px, -5px);
 }
+.home{
+    background: #dd4201;
+    min-height: 670px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12rem !important;
+}
+.home-content{
+    z-index: 1;
+}
+.home-img{
+    position: relative;
+}
+.home-img img{
+    width: 100%;
+}
+.home-img::before{
+    width: 100%;
+    content: "Taycan";  /*se agrego la palabra de fondo del auto y sus caracteristicas*/
+    font-size: 11rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    position: absolute;
+    text-align: center;
+    top: -80px;
+    color: #ffb18d;
+    z-index: -1;
+}
+.input-form{
+    max-width: 550px;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-color);
+    padding: 12px;
+    border-radius: 0.5rem;
+}
+.input-box{
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-box span{
+    font-weight: 500;
+}
+/*se debe de cambiar para ocultar la barra de busqueda el recuadro recordatorio*/
+.input-box input{
+    outline: none;
+    border: none;
+    color: var(--text-alter-color);
+    background: transparent;
+    font-size: 0.94rem;
+    margin-top: 7px;
+}
+.input-border {
+    border-right: 1px solid var(--text-alter-color);
+    padding-right: 5px;
+}
