@@ -188,3 +188,17 @@ color: var(--main-color);
     border-right: 1px solid var(--text-alter-color);
     padding-right: 5px;
 }
+/*contorno a icono de busqueda-naranja*/
+.search-btn{
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+.search-btn:hover {
+    background: var(--second-color);
+    transition: 0.3s ease;
+}
