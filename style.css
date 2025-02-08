@@ -202,3 +202,52 @@ color: var(--main-color);
     background: var(--second-color);
     transition: 0.3s ease;
 }
+/* Heading */
+.heading{
+    margin-bottom: 2rem;
+}
+.heading h2{
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+/*Agrupación de Trending cars en 4*/
+.trending-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1.5rem;
+}
+.trend-box{
+    background: var(--container-color);
+    padding: 15px;
+    border-radius: 10px;
+    transition: background 0.5s ease;
+}
+.trend-box:hover{
+    background: #fff;
+    border: 2px solid var(--container-color);
+    transition: background 0.5s ease;
+}
+.trend-box h4{
+    display: inline-block;
+    font-family: var(--poppins-font);
+    background: #fff;
+    font-size: 0.8rem;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.trend-box:hover h4 {
+    background: #eeeff2;
+}
+.trend-box img{
+    margin: 1.4rem 0 1rem;
+}
+.trend-box h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.trend-box p {
+    font-size: 0.9rem;
+    margin-top: 7px;
+    color: var(--text-alter-color);
+}
