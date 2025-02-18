@@ -24,6 +24,11 @@ body{
     color: var(--text-color);
     background: var(--bg-color);
 }
+/* Custom ScrollBar */
+html::-webkit-scrollbar{
+    width: 0.5;
+    background: transparent;
+}
 a{
     text-decoration: none;
 }
@@ -465,4 +470,181 @@ color: var(--main-color);
 .newsletter form .s-btn:hover{
     background: var(--text-color);
     transition: 0.4s ease-in-out;
+}
+.footer{
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 40px 0 30px;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+.social{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.social a .bx{
+    font-size: 20px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 0.8rem;
+}
+.social a .bx:hover{
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: background 0.4s ease-in-out;
+}
+.footer-box h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+.footer-box p {
+    margin-bottom: 8px;
+}
+.footer-box p span{
+    display: inline-block;
+    width: 50px;
+}
+.footer-box a{
+    color: var(--bg-color);
+    margin-bottom: 10px;
+}
+.copyright{
+    padding: 30px;
+    color: var(--bg-color);
+    text-align: center;
+}
+/* Making Responsive */
+@media (max-width: 1080px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 970px){
+    section {
+        padding: 2rem 0;
+    }
+    .home-img::before {
+        font-size: 8rem;
+        top: -60px;
+    }
+}
+@media (max-width: 880px){
+    .nav{
+        padding: 12px 20px;
+        border-radius: 0.6rem;
+    }
+    .logo{
+        font-size: 1.5rem;
+    }
+    .home {
+        min-height: 500px;
+        padding-top: 9rem !important;
+    }
+    .home-img::before {
+        font-size: 6rem;
+        top: -38px;
+    }
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 620px) {
+    header {
+        top: 15px;
+    }
+    .nav-icons .bx {
+        font-size: 17px;
+    }
+    .menu-icon{
+        display: flex;
+    }
+    .navbar{
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+        background: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .open-menu{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .nav-link{
+        display: block;
+        margin: 1rem 0;
+    }
+    .home{
+        min-height: 440px;
+        /* Agrega un relleno superior de 8 rem */
+        padding-top: 8rem !important; 
+    }
+    .home-img::before {
+        font-size: 5rem;
+        top: -34px;
+        letter-spacing: 1.2rem;
+    }
+    .newsletter h2 {
+        font-size: 2.1rem;
+    }
+    .newsletter p {
+        font-size: 0.94rem;
+    }
+}
+@media (max-width: 477px) {
+    .home-img{
+        width: 95%;
+        margin: auto;
+    }
+    .home-img::before {
+        font-size: 4rem;
+        top: -32px;
+        letter-spacing: 1rem;
+    }
+    .input-form {
+        flex-direction: column;
+        align-items: normal;
+    }
+    .input-box {
+        flex: none;
+    }
+    .input-border {
+        border-right: none;
+        padding: 0 0 10px;
+        border-bottom: 1px solid var(--text-alter-color);
+    }
+    .heading h2 {
+        font-size: 2rem;
+    }
+    .reviews-content, 
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 380px) {
+    .home-img::before {
+        font-size: 3.5rem;
+        top: -32px;
+        letter-spacing: 0.8rem;
+    }
 }
