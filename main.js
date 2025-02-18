@@ -26,3 +26,18 @@ window.onload = () => {
     .toISOString()
     .split("T")[0];
 };
+// Scroll Reveal Animation es la parte de barra de navegacion se le agrego tiempo
+// para dar el efecto de retardo al momento de cargar la pagina 
+const animate = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: "2500",
+    delay: "400",
+});
+// efecto al auto del lado derecho 
+animate.reveal(".nav,.heading");
+animate.reveal(".home-img img", { origin: "right"});
+// efecto al botton
+animate.reveal(".input-form", { origin: "bottom"});
+// efecto al apartado Trending Vehicles al igual que a rental, a descripcion de colaboradores, a reseñas y newsletter o barra de subcripcion 
+animate.reveal(".trend-box, .rental-box, .team-box, .t-box, .newsletter", { interval: 100 });

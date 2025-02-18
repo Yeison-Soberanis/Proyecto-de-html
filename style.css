@@ -24,10 +24,16 @@ body{
     color: var(--text-color);
     background: var(--bg-color);
 }
-/* Custom ScrollBar */
+.content{
+    overflow: hidden;
+}
+/* Custom ScrollBar barra de deslizamiento */
 html::-webkit-scrollbar{
     width: 0.5;
     background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
 }
 a{
     text-decoration: none;
@@ -160,6 +166,21 @@ color: var(--main-color);
     top: -80px;
     color: #ffb18d;
     z-index: -1;
+    /* parte de la animación */
+    transform: translateX(-60px);
+    transition: transform 2.5s ease opacity 2.5s ease;
+    animation: reavealfromright 2.5s ease forwards;
+    animation-delay: 0.4s;
+}
+@keyframes reavealfromright {
+    0%{
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 .input-form{
     max-width: 550px;
